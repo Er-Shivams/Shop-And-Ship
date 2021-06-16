@@ -1,7 +1,12 @@
 import React from "react";
-import Menu from "./Menu";
+import {FaGithub, FaFacebook, FaInstagram, FaLinkedin, FaTwitter} from "react-icons/fa";
 
+
+import Menu from "./Menu";
+import {footer, Custom} from "../styles.css"
 // if using () dont use return keyword if using {} then use return keyword
+
+const  date = new Date().getFullYear();
 
 const Base = ({
     title = "My Title",
@@ -10,7 +15,7 @@ const Base = ({
     children 
 }) => (
 
-    <div>
+    <body>
         <Menu />
         <div className="container-fluid">
             <div className="jumbotron bg-dark text-white text-center">
@@ -19,16 +24,33 @@ const Base = ({
             </div>
             <div className={className}>{children}</div>
         </div>
+
+    
         <footer className="footer bg-dark mt-auto py-3">
-            <div className="container-fluid bg-success text-white text-center py-3">
-                <h4> if you got any question, feel free to reach out!</h4>
-                <button className="btn btn-warning btn-lg">Contact us</button>
+  
+       {/* social-icon */}
+                    {/* <social-icon>
+                    <ul className="nav">
+                    <a href="#"><li className="mx-4 col px-md-5" ><FaGithub color="#fffff" size="2.5em"/></li> </a>      
+                    <a href="#"><li className="mx-4 col px-md-5"> <FaFacebook color="#4267B2" size="2.5em"/> </li></a>  
+                    <a href="#"><li className="mx-4 col px-md-5"> <FaInstagram color="#8a3ab9" size="2.5em"/> </li></a>    
+                    <a href="#"><li className="mx-4 col px-md-5"> <FaLinkedin color="#0e76a8" size="2.5em"/> </li></a>  
+                    <a href="#"><li className="mx-4 col px-md-5"> <FaTwitter color=" #1DA1F2" size="2.5em" /> </li></a>  
+                    </ul>
+                    </social-icon> */}
+            <div className="container-fluid px-4 text-white text-center">
+                  <h4> If You Have Any Query, Feel Free To Reach Out!</h4>
+                   <button className="btn btn-warning btn-lg ">Contact us</button>
             </div>
             <div className="container">
-                <span className="text-muted"> An amazing  <span className="text-white">MERN</span>  Bootcamp</span>
+              <marquee direction="right">  <span className="text-muted"> &copy;{date} Copyright Reserved: <span className="text-white"> BOOK STORE By Shivam</span> Made with ❤</span>
+              </marquee>
             </div>
+            
+
         </footer>
-    </div>
+        
+    </body>
 )
 
 

@@ -8,8 +8,10 @@ const currentTab = (history, path) => {
         return {color: "#2ecc72"}
     }
     else{
+        // navbar button text color
         return {color: "#FFFFFF"}
     }
+   
 }
 const Menu = ({history}) => (
         <div>
@@ -25,11 +27,12 @@ const Menu = ({history}) => (
                     </Link>
                 </li>
 
+
              {isAuthenticated() && isAuthenticated().user.role===0 && (
                     
                  <li className="nav-item">
                     <Link style={currentTab(history, "/user/dashboard")}  className="nav-link" to="/user/dashboard">
-                       U. Dashboard
+                       User Dashboard
                     </Link>
                 </li>
               )}
@@ -39,7 +42,7 @@ const Menu = ({history}) => (
 
                      <li className="nav-item">
                     <Link style={currentTab(history, "/admin/dashboard")} className="nav-link" to="/admin/dashboard">
-                        A. Dashboard
+                        Admin Dashboard
                     </Link>
                     </li>
               )}

@@ -77,7 +77,7 @@ const AddProduct = () => {
      <div className="alert alert-success mt-2" 
     style={{display: createdProduct ? "" : "none"}}    
     >
-      <h4>{createdProduct} created successfully</h4>
+      <h4>{createdProduct} Created Successfully</h4>
     </div>
   )
    
@@ -162,8 +162,8 @@ const AddProduct = () => {
 
 
     return (
-        <Base title="Add Product Here" 
-        description="Welcome to product creation section"
+        <Base title="Add New Product Here" 
+        description="Welcome To The Product Creation section"
         className="container bg-info p-4"
         >
             <Link to= "/admin/dashboard" className="btn btn-md btn-dark mb-3">
